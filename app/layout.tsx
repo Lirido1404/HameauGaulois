@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { NavigationMenuDemo } from "./(components)/Navbar";
+import Mainnav from "./(components)/Mainnav";
+import FlecheRemonte from "./(components)/FlecheRemonte";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="bg-[#08262E] flex flex-col-reverse">
+          <FlecheRemonte/>
+        
+        {children}<Mainnav/></div>
+        </body>
     </html>
   );
 }
