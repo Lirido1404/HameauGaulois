@@ -91,7 +91,7 @@ export function NavigationMenuDemo() {
           <NavigationMenuTrigger>Participer et soutenir</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className=" w-[400px] flex flex-wrap p-4 md:w-[500px] lg:w-[600px] ">              
-              <ListItem href="/" title="Actions">
+              <ListItem href="/Participation" title="Actions">
               <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
               </ListItem>
               <ListItem href="/" title="Calendrier">
