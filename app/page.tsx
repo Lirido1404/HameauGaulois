@@ -1,24 +1,22 @@
 import Image from "next/image";
-import Titre from "./(components)/Titre";
 import Texte1 from "./(components)/Texte1";
+import Titre2 from "./(components)/Titre2";
+import Commentaires from "./(components)/Commentaires";
+import TimeLine from "./(components)/TimeLine";
+import PhotoParticipants from "./(components)/PhotoParticipants";
 
 export default function Home() {
   return (
     <div className="mt-20">
-      <Titre />
-
-      <p className="text-white text-center">
-        L&apos;association Hameau Gaulois est une association Loi 1901 créée
-        l&apos;été 2023 par des habitants du quartier du Hameau au Plessis
-        Robinson (92) en vue de défendre leur quartier.
-      </p>
+      <Titre2 />
+      <Commentaires />
       <h2
-        className="text-center text-white font-bold text-2xl mt-12 lg:text-6xl"
+        className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left underline"
         id="pres"
       >
         Présentation
       </h2>
-      <div className="flex flex-col gap-2 lg:flex-row mt-10 justify-center w-[70%] mx-auto">
+      <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-20 justify-center w-[70%] mx-auto">
         <div className="flex justify-end items-end">
           <p className="text-white text-justify p-2">
             Le quartier du Hameau est un quartier centenaire du Sud Parisien
@@ -42,15 +40,15 @@ export default function Home() {
         <img
           src={"/Images/mapsh.jpg"}
           alt="Gaulois"
-          className="w-[50%] border-white p-2 lg:border-b-4 lg:border-l-4 rounded-lg"
+          className="w-[50%] border-white p-1 lg:border-b-4 lg:border-l-4 rounded-lg"
         />
       </div>
 
-      <div className="flex flex-col gap-2 lg:flex-row mt-18 justify-center w-[70%] mx-auto">
+      <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-0 justify-center w-[70%] mx-auto">
         <img
           src={"/Images/AvRue.jpg"}
           alt="Gaulois"
-          className="w-[50%] lg:border-t-4 lg:border-r-4 border-white p-2 rounded-lg"
+          className="w-[50%] lg:border-t-4 lg:border-r-4 border-white p-1 rounded-lg"
         />
         <p className="text-white text-justify p-2">
           En particulier, le projet de PLUi prévoit de faire construire des
@@ -69,132 +67,66 @@ export default function Home() {
         <Texte1 />
       </div>
       <h2
-        className="text-center text-white font-bold text-2xl mt-12 lg:text-6xl"
+        className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left underline"
         id="objectifs"
       >
         Objectifs
       </h2>
 
-      <div className="box-timeline">
-        <div className="ligne"></div>
-
-        <div className="rond r1" data-anim="1">
-          <img src={"/Images/carton.svg"} alt="Gaulois" className="h-12 w-12" />
-        </div>
-        <div className="rond r2 " data-anim="2">
-          <img src={"/Images/man1.svg"} alt="Gaulois" className="h-12 w-12" />
-        </div>
-        <div className="rond r3" data-anim="3">
-          <img src={"/Images/mapp.svg"} alt="Gaulois" className="h-12 w-12" />
-        </div>
-        <div className="rond r4" data-anim="4">
-          <img src={"/Images/cityyy.svg"} alt="Gaulois" className="h-12 w-12" />
-        </div>
-        <div className="rond r5" data-anim="5">
-          <img
-            src={"/Images/meeting.svg"}
-            alt="Gaulois"
-            className="h-12 w-12"
-          />
-        </div>
-        <div className="rond r6" data-anim="6">
-          <img
-            src={"/Images/searchhh.svg"}
-            alt="Gaulois"
-            className="h-12 w-12"
-          />
-        </div>
-
-        <div className="box b1" data-anim="1">
-          <h2>23 / 03 / 2012</h2>
-          <p>
-            Le quartier du Hameau avait unanimement repoussé un projet de la
-            Mairie de transformer le quartier en zone d&apos;habitation
-            collective. A cette époque, le maire avait bien voulu se résoudre à
-            “remettre son projet dans les cartons” en précisant qu&apos;il
-            n&apos;inclurait pas le quartier dans le futur projet de la zone
-            NOVEOS.
-          </p>
-        </div>
-
-        <div className="box b2" data-anim="2">
-          <h2>19 / 03 / 2014</h2>
-          <p>
-            4 jours avant le premier tour des élections municipales, le Maire
-            distribue aux habitants du quartier une lettre écrite, leur
-            confirmant qu&apos;il tiendrait ses promesses faites en 2012.
-          </p>
-        </div>
-
-        <div className="box b3" data-anim="3">
-          <h2>17 / 12 / 05</h2>
-          <p>
-            La mairie inclut notre quartier dans l&apos;OAP NOVEOS sans modifier
-            le plan de zonage.
-          </p>
-        </div>
-
-        <div className="box b4" data-anim="4">
-          <h2>Septembre 2022</h2>
-          <p>
-            Selon les informations dont nous disposons et qui restent à
-            vérifier, la mairie demande à VSGP de transformer notre quartier
-            pavillonnaire en quartier d&apos;habitation collective.
-          </p>
-        </div>
-
-        <div className="box b5" data-anim="5">
-          <h2>09 / 03 / 2023</h2>
-          <p>
-            Le maire réunit le quartier et informe avoir enclenché la
-            transformation du quartier. Cette réunion a été le point de départ
-            de la volonté de la majorité des habitants du quartier de se
-            mobiliser.
-          </p>
-        </div>
-
-        <div className="box b6" data-anim="6">
-          <h2>2024</h2>
-          <p>
-            Une enquête publique va avoir lieu en 2024 pour valider le PLUi de
-            Vallée Sud Grand Paris et de son nouveau plan de zonage.
-          </p>
-        </div>
-      </div>
+      <TimeLine/>
+      <PhotoParticipants/>
 
       <h2
-        className="text-center text-white font-bold text-2xl mt-12 lg:text-6xl"
+        className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left underline"
         id="historique"
       >
         Historique
       </h2>
 
-      <div className="w-[70%] mx-auto mt-10">
-        <p className="text-white text-justify">
-          Avant de s&apos;appeler Plessis Robinson, notre ville s&apos;appelait Plessis
-          Picquet. Au 19ème siècle, notre quartier n&apos;existait pas. Il n&apos;y avait
-          que des champs et des prés. Seul existait à proximité le cimetière qui
-          est toujours ici de nos jours. <br /> <br /> Le concept de cité-jardin qui associe
-          habitat et jardins, apparaît au Plessis Robinson dans les années 1930.
-          Notre quartier était alors un petit îlot détaché de la petite ville du
-          Plessis Robinson, d&apos;où son nom de Hameau. Il n&apos;est sorti de son
-          isolement que pendant les années 1960, après que les nombreux prés et
-          champs ont disparus, en particulier à l&apos;avantage de la construction de
-          nombreux équipements municipaux. <br /> <br /> Notre quartier a émergé entre les
-          années 1900 et 1930, il est donc centenaire. C&apos;est un quartier où la
-          vie puise encore sa source dans les histoires familiales. Une dame de
-          95 ans est là, juste à côté de la maison où elle est née laquelle,
-          elle aussi, est toujours là. Une vieille dame est toujours
-          propriétaire de la maison que son grand père a construit de ses mains. <br /> <br />
+      <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-20 justify-center w-[70%] mx-auto">
+        <div className="w-[50%] flex justify-end lg:border-b-4 lg:border-r-4 border-white p-1 rounded-lg ">
+        <iframe className="w-full h-full rounded-lg" src="https://www.youtube.com/embed/wHPNlgCMgVY?si=yTjdrzLR63CXYAlB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div className="w-[50%] ">
+        <p className="text-white text-justify p-2">
+            Avant de s&apos;appeler Plessis Robinson, notre ville
+            s&apos;appelait Plessis Picquet. Au 19ème siècle, notre quartier
+            n&apos;existait pas. Il n&apos;y avait que des champs et des prés.
+            Seul existait à proximité le cimetière qui est toujours ici de nos
+            jours. <br /> <br /> Le concept de cité-jardin qui associe habitat
+            et jardins, apparaît au Plessis Robinson dans les années 1930. Notre
+            quartier était alors un petit îlot détaché de la petite ville du
+            Plessis Robinson, d&apos;où son nom de Hameau. Il n&apos;est sorti
+            de son isolement que pendant les années 1960, après que les nombreux
+            prés et champs ont disparus, en particulier à l&apos;avantage de la
+            construction de nombreux équipements municipaux. <br /> <br /> Notre
+            quartier a émergé entre les années 1900 et 1930, il est donc
+            centenaire. C&apos;est un quartier où la vie puise encore sa source
+            dans les histoires familiales. Une dame de 95 ans est là, juste à
+            côté de la maison où elle est née laquelle, elle aussi, est toujours
+            là.
+          </p>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-0 justify-center w-[70%] mx-auto">
+        <p className="text-white text-justify p-2">
+          Une vieille dame est toujours propriétaire de la maison que son grand
+          père a construit de ses mains. <br /> <br />
           2 belles-soeurs, toutes deux ayant passé les 90 ans, habitent toujours
           dans leurs maisons respectives au sein du même quartier. Un jeune
           homme a reçu en héritage la maison de son père, y habite et compte
-          bien rester dans l&apos;héritage familial jusqu&apos;à trépas. <br /> <br /> Il n&apos;y a que 40
-          familles dans le quartier, mais son passé est si riche qu&apos;il y aurait
-          de quoi écrire des livres sur celui-ci. Il recèle de nombreuses et
-          belles histoire de familles comme on les voit dans nos villages de
-          France.
+          bien rester dans l&apos;héritage familial jusqu&apos;à trépas. <br />{" "}
+          <br /> Il n&apos;y a que 40 familles dans le quartier, mais son passé
+          est si riche qu&apos;il y aurait de quoi écrire des livres sur
+          celui-ci. Il recèle de nombreuses et belles histoire de familles comme
+          on les voit dans nos villages de France.
         </p>
+        <img
+          src={"/Images/AvRue.jpg"}
+          alt="Gaulois"
+          className="w-[50%] lg:border-t-4 lg:border-l-4 border-white p-1 rounded-lg"
+        />
       </div>
     </div>
   );

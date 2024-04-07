@@ -51,7 +51,7 @@ export function NavigationMenuDemo() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>
+          <NavigationMenuTrigger className="colornavitem">
             A propos de l&apos;association
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -88,7 +88,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Participer et soutenir</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="colornavitem">Participer et soutenir</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className=" w-[400px] flex flex-wrap p-4 md:w-[500px] lg:w-[600px] ">              
               <ListItem href="/Participation" title="Actions">
@@ -109,16 +109,16 @@ export function NavigationMenuDemo() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem >
           <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink className={`colornavitem ${navigationMenuTriggerStyle()}`} >
               Contacts
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem className="pl-12">
           <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink className={`colornavitem ${navigationMenuTriggerStyle()}`} >
               Login
             </NavigationMenuLink>
           </Link>

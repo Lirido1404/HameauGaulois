@@ -10,6 +10,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+
+
 function Mainnav() {
   const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -23,12 +25,12 @@ function Mainnav() {
   return (
     <div className="">
       <nav className="">
-        <div className="w-full justify-between items-center p-4 lg:hidden hidden xl:flex">
+        <div className="w-full justify-between items-center p-6 lg:hidden hidden xl:flex bg-[#f1f1f1]">
           <Link href={"/"}>
             <Image
               src={"/Images/Logo21.png"}
-              width={100}
-              height={100}
+              width={70}
+              height={70}
               alt="Logo"
             />
           </Link>

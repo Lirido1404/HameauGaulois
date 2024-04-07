@@ -4,6 +4,8 @@ import "./globals.css";
 import { NavigationMenuDemo } from "./(components)/Navbar";
 import Mainnav from "./(components)/Mainnav";
 import FlecheRemonte from "./(components)/FlecheRemonte";
+import Footer from "./(components)/Footer";
+import BarreLecture from "./(components)/BarreLecture";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,10 +23,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="bg-[#08262E] flex flex-col-reverse">
-          <FlecheRemonte/>
-        
-        {children}<Mainnav/></div>
-        </body>
+          <Footer />
+          <FlecheRemonte />
+
+          {children}
+          <Mainnav />
+          <BarreLecture/>
+        </div>
+      </body>
     </html>
   );
 }
