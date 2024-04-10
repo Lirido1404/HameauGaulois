@@ -76,8 +76,8 @@ export default function Home() {
         Objectifs
       </h2>
 
-      <TimeLine />
-      <div className="mt-20 flex justify-center">
+      
+      <div className="mt-20">
         <TimeLine2 />
       </div>
       <PhotoParticipants />
