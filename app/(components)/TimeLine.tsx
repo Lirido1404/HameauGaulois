@@ -1,16 +1,13 @@
-'use client'
 import React from "react";
-import {motion} from "framer-motion"
+
 function TimeLine() {
   return (
     <div className="box-timeline">
       <div className="ligne"></div>
 
-      <motion.div initial={{opacity:0,scale:0}} whileInView={{opacity:1,scale:1}} transition={{duration:0.6}}>
         <div className="rond r1" data-anim="1">
         <img src={"/Images/carton.svg"} alt="Gaulois" className="h-12 w-12" />
       </div>
-      </motion.div>
       <div className="rond r2 " data-anim="2">
         <img src={"/Images/man1.svg"} alt="Gaulois" className="h-12 w-12" />
       </div>

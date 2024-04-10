@@ -4,6 +4,11 @@ import Titre2 from "./(components)/Titre2";
 import Commentaires from "./(components)/Commentaires";
 import TimeLine from "./(components)/TimeLine";
 import PhotoParticipants from "./(components)/PhotoParticipants";
+import Vid2 from "./(components)/Vid2";
+import Img1 from "./(components)/Img1";
+import Img2 from "./(components)/Img2";
+import Img3 from "./(components)/Img3";
+import TimeLine2 from "./(components)/TimeLine2";
 
 export default function Home() {
   return (
@@ -17,7 +22,7 @@ export default function Home() {
         Présentation
       </h2>
       <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-20 justify-center w-[70%] mx-auto">
-        <div className="flex justify-end items-end">
+        <div className="flex justify-end items-end w-[50%]">
           <p className="text-white text-justify p-2">
             Le quartier du Hameau est un quartier centenaire du Sud Parisien
             dont vous trouverez ici,
@@ -25,42 +30,40 @@ export default function Home() {
               href="https://fr.wikipedia.org/wiki/Le_Plessis-Robinson"
               className="text-purple-500 underline"
             >
-              son histoire
+              son histoire.
             </a>
-            . Le tracé du Tramway T10 le sépare en deux parties. La pointe du
+            <br />
+            <br />
+            Le tracé du Tramway T10 le sépare en deux parties. La pointe du
             quartier, qui se trouve à l&apos;Ouest du T10 est en danger de
             disparition. Pour notre quartier c&apos;est une question
-            existentielle. En effet, sous l&apos;impulsion de la Mairie du
-            Plessis Robinson, l&apos;agglomération de communes Vallée Sud Grand
-            Paris (VSGP) a publié un projet début 2024 de plan de zonage pour le
-            futur PLUi.
+            existentielle. <br /> <br /> En effet, sous l&apos;impulsion de la
+            Mairie du Plessis Robinson, l&apos;agglomération de communes Vallée
+            Sud Grand Paris (VSGP) a publié un projet début 2024 de plan de
+            zonage pour le futur PLUi.
           </p>
         </div>
 
-        <img
-          src={"/Images/mapsh.jpg"}
-          alt="Gaulois"
-          className="w-[50%] border-white p-1 lg:border-b-4 lg:border-l-4 rounded-lg"
-        />
+        <Img2 />
       </div>
 
       <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-0 justify-center w-[70%] mx-auto">
-        <img
-          src={"/Images/AvRue.jpg"}
-          alt="Gaulois"
-          className="w-[50%] lg:border-t-4 lg:border-r-4 border-white p-1 rounded-lg"
-        />
-        <p className="text-white text-justify p-2">
-          En particulier, le projet de PLUi prévoit de faire construire des
-          bâtiments collectifs de logements (bâtiments d&apos;appartements) de 5
-          niveaux, après avoir rasé le quartier. Hors, ce projet va à
-          l&apos;encontre des objectifs affichés de VSGP, qui avait annoncé
-          défendre les zones pavillonnaires, lesquelles participent au
-          foisonnement écologique de l&apos;agglomération. Alors que notre
-          quartier apparaissait initialement en tant que “Zone Pavillonnaire”
-          dans le plan de zonage de notre ville, il apparaît soudainement comme
-          une “zone de projet” dans le plan de zonage du projet de VSGP.
-        </p>
+        <Img3 />
+        <div className="w-[50%]">
+          <p className="text-white text-justify p-2">
+            En particulier, le projet de PLUi prévoit de faire construire des
+            bâtiments collectifs de logements (bâtiments d&apos;appartements) de
+            5 niveaux, après avoir rasé le quartier. <br />
+            <br /> Hors, ce projet va à l&apos;encontre des objectifs affichés
+            de VSGP, qui avait annoncé défendre les zones pavillonnaires,
+            lesquelles participent au foisonnement écologique de
+            l&apos;agglomération. <br />
+            <br /> Alors que notre quartier apparaissait initialement en tant
+            que “Zone Pavillonnaire” dans le plan de zonage de notre ville, il
+            apparaît soudainement comme une “zone de projet” dans le plan de
+            zonage du projet de VSGP.
+          </p>
+        </div>
       </div>
 
       <div>
@@ -73,8 +76,11 @@ export default function Home() {
         Objectifs
       </h2>
 
-      <TimeLine/>
-      <PhotoParticipants/>
+      <TimeLine />
+      <div className="mt-20 flex justify-center">
+        <TimeLine2 />
+      </div>
+      <PhotoParticipants />
 
       <h2
         className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left underline"
@@ -85,10 +91,10 @@ export default function Home() {
 
       <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-20 justify-center w-[70%] mx-auto">
         <div className="w-[50%] flex justify-end lg:border-b-4 lg:border-r-4 border-white p-1 rounded-lg ">
-        <iframe className="w-full h-full rounded-lg" src="https://www.youtube.com/embed/wHPNlgCMgVY?si=yTjdrzLR63CXYAlB" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          <Vid2 />
         </div>
         <div className="w-[50%] ">
-        <p className="text-white text-justify p-2">
+          <p className="text-white text-justify p-2">
             Avant de s&apos;appeler Plessis Robinson, notre ville
             s&apos;appelait Plessis Picquet. Au 19ème siècle, notre quartier
             n&apos;existait pas. Il n&apos;y avait que des champs et des prés.
@@ -110,23 +116,21 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-0 justify-center w-[70%] mx-auto">
-        <p className="text-white text-justify p-2">
-          Une vieille dame est toujours propriétaire de la maison que son grand
-          père a construit de ses mains. <br /> <br />
-          2 belles-soeurs, toutes deux ayant passé les 90 ans, habitent toujours
-          dans leurs maisons respectives au sein du même quartier. Un jeune
-          homme a reçu en héritage la maison de son père, y habite et compte
-          bien rester dans l&apos;héritage familial jusqu&apos;à trépas. <br />{" "}
-          <br /> Il n&apos;y a que 40 familles dans le quartier, mais son passé
-          est si riche qu&apos;il y aurait de quoi écrire des livres sur
-          celui-ci. Il recèle de nombreuses et belles histoire de familles comme
-          on les voit dans nos villages de France.
-        </p>
-        <img
-          src={"/Images/AvRue.jpg"}
-          alt="Gaulois"
-          className="w-[50%] lg:border-t-4 lg:border-l-4 border-white p-1 rounded-lg"
-        />
+        <div className="w-[50%] ">
+          <p className="text-white text-justify p-2">
+            Une vieille dame est toujours propriétaire de la maison que son
+            grand père a construit de ses mains. <br /> <br />
+            2 belles-soeurs, toutes deux ayant passé les 90 ans, habitent
+            toujours dans leurs maisons respectives au sein du même quartier. Un
+            jeune homme a reçu en héritage la maison de son père, y habite et
+            compte bien rester dans l&apos;héritage familial jusqu&apos;à
+            trépas. <br /> <br /> Il n&apos;y a que 40 familles dans le
+            quartier, mais son passé est si riche qu&apos;il y aurait de quoi
+            écrire des livres sur celui-ci. Il recèle de nombreuses et belles
+            histoire de familles comme on les voit dans nos villages de France.
+          </p>
+        </div>
+        <Img1 />
       </div>
     </div>
   );

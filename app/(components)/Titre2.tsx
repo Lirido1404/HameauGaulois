@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import Vid1 from "./Vid1";
 
 function Titre2() {
   return (
@@ -53,12 +54,9 @@ function Titre2() {
           </button>
         </Link>
       </div>
-      <div className="lg:w-[50%] flex gap-12 justify-center items-center">
-        <Separator orientation="vertical" />
-        <iframe className="w-[200px] h-[112px] lg:w-[560px] lg:h-[315px] rounded-lg" src="https://www.youtube.com/embed/qY9gK2Gqwik?si=YoFbk5WgSaM0FfF1" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-
-      </div>
+      <Vid1/>
     </div>
+    
   );
 }
 
