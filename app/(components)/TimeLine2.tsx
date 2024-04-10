@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import {motion}
+import {motion} from "framer-motion"
 function TimeLine2() {
   return (
     <div className="timeline">
