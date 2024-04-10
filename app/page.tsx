@@ -2,7 +2,6 @@ import Image from "next/image";
 import Texte1 from "./(components)/Texte1";
 import Titre2 from "./(components)/Titre2";
 import Commentaires from "./(components)/Commentaires";
-import TimeLine from "./(components)/TimeLine";
 import PhotoParticipants from "./(components)/PhotoParticipants";
 import Vid2 from "./(components)/Vid2";
 import Img1 from "./(components)/Img1";

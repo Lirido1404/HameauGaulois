@@ -483,3 +483,34 @@ body {
 .card:nth-child(even) > .info > .title::before {
   right: -45px;
 }
+
+
+
+
+
+
+.pulse{
+  
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(#1A73E8,#3d7dd1);
+  border-radius: 50%;
+}
+
+.pulse span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  opacity: .8;
+  animation: pulseAnimate 2s ease-out infinite;
+  animation-delay: calc(0.4s * var(--i));
+}
+
+@keyframes pulseAnimate{
+  100%{
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}

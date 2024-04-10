@@ -7,7 +7,7 @@ function Footer() {
       <h2 className="text-2xl font-bold">Contact</h2>
       <div className="flex justify-between items-center">
         <div className="italic">
-          <p>adresseMailHameauGaulois@gmail.com</p>
+          <p>HameauGaulois@gmail.com</p>
           <p>06 05 04 03 02 </p>
         </div>
         <div className="flex gap-2 mr-20">

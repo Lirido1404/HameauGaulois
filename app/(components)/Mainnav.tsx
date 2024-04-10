@@ -29,8 +29,8 @@ function Mainnav() {
           <Link href={"/"}>
             <Image
               src={"/Images/Logo21.png"}
-              width={70}
-              height={70}
+              width={100}
+              height={100}
               alt="Logo"
             />
           </Link>
