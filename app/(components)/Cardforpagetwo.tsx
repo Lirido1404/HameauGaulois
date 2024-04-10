@@ -14,13 +14,11 @@ function Cardforpagetwo() {
         <CardHeader>
           <CardTitle className="text-xl lg:text-3xl">
             <div className="flex gap-4 items-center">
-            <div className="pulse relative">
-              
-
-              <span style={{ "--i": 0 }}></span>
-              <span style={{ "--i": 1 }}></span>
-            </div>
-            <p>En cours</p>
+              <div className="pulse relative">
+                <span className="span1"></span>
+                <span className="span2" ></span>
+              </div>
+              <p>En cours</p>
             </div>
           </CardTitle>
           <CardDescription>Elargissement des adhésions</CardDescription>
@@ -40,15 +38,13 @@ function Cardforpagetwo() {
 
       <Card>
         <CardHeader>
-        <CardTitle className="text-xl lg:text-3xl">
+          <CardTitle className="text-xl lg:text-3xl">
             <div className="flex gap-4 items-center">
             <div className="pulse relative">
-              
-
-              <span style={{ "--i": 0 }}></span>
-              <span style={{ "--i": 1 }}></span>
-            </div>
-            <p>A venir</p>
+                <span className="span1"></span>
+                <span className="span2" ></span>
+              </div>
+              <p>A venir</p>
             </div>
           </CardTitle>
           <CardDescription>
