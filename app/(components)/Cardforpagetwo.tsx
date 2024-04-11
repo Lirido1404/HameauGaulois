@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
 function Cardforpagetwo() {
   return (
     <>
@@ -16,7 +17,7 @@ function Cardforpagetwo() {
             <div className="flex gap-4 items-center">
               <div className="pulse relative">
                 <span className="span1"></span>
-                <span className="span2" ></span>
+                <span className="span2"></span>
               </div>
               <p>En cours</p>
             </div>
@@ -40,10 +41,7 @@ function Cardforpagetwo() {
         <CardHeader>
           <CardTitle className="text-xl lg:text-3xl">
             <div className="flex gap-4 items-center">
-            <div className="pulse relative">
-                <span className="span1"></span>
-                <span className="span2" ></span>
-              </div>
+              <img src="/Images/sablier.svg" alt="" className="h-[30px] w-[30px] sablierr" />
               <p>A venir</p>
             </div>
           </CardTitle>

@@ -524,3 +524,18 @@ body {
     transform: scale(1.4);
   }
 }
+
+
+@keyframes rotatee{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+
+  }
+}
+
+.sablierr{
+  animation: rotatee 2s ease-in-out infinite;
+}

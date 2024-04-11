@@ -94,7 +94,7 @@ export function NavigationMenuDemo() {
               <ListItem href="/Participation" title="Actions">
               <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
               </ListItem>
-              <ListItem href="/" title="Calendrier">
+              <ListItem href="/Participation/#calendrier" title="Calendrier">
                 <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
               </ListItem>
               <ListItem href="/" title="Adhésion">

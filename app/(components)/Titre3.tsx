@@ -10,7 +10,7 @@ function Titre3() {
   return (
     <div className="w-[70%] mx-auto flex-col lg:flex-row flex gap-8">
       <div className="lg:w-[50%]">
-        <h1 className="text-xl font-bold lg:text-6xl text-white">Actions</h1>
+        <h1 className="text-xl font-bold lg:text-6xl text-white" id="actions">Actions</h1>
         <p className="w-full text-justify text-white mt-16 leading-8 text-lg">
           AHG se réserve le droit de mener toute action (conformément à la
           réglementation) afin de communiquer sur le projet de la Mairie et de
