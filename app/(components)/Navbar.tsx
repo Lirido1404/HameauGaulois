@@ -117,7 +117,7 @@ export function NavigationMenuDemo() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem className="pl-12">
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/Account" legacyBehavior passHref>
           <NavigationMenuLink className={`colornavitem ${navigationMenuTriggerStyle()}`} >
               Login
             </NavigationMenuLink>

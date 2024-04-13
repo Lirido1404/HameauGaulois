@@ -9,8 +9,8 @@ import {
 } from "@/components/ui/card";
 function CardCalendar() {
   return (
-    <div className="flex flex-col flex-wrap gap-2">
-      <Card className="border-2 border-blue-500">
+    <div className="flex flex-col flex-wrap gap-4">
+      <Card className="outline outline-2 outline-offset-2 outline-blue-500">
         <CardHeader className="p-3">
           <CardTitle className="text-xl lg:text-3xl">Tractation</CardTitle>
         </CardHeader>
@@ -21,7 +21,7 @@ function CardCalendar() {
         </CardContent>
       </Card>
 
-      <Card className="border-2 border-blue-500">
+      <Card className="outline outline-2 outline-offset-2 outline-blue-500">
         <CardHeader className="p-3">
           <CardTitle className="text-xl lg:text-3xl">Tractation</CardTitle>
         </CardHeader>
