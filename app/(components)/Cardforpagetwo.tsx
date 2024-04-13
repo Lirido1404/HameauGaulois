@@ -13,7 +13,7 @@ function Cardforpagetwo() {
     <>
       <Card>
         <CardHeader>
-          <CardTitle className="text-xl lg:text-3xl">
+          <CardTitle className="text-xl lg:text-3xl flex justify-center lg:justify-start">
             <div className="flex gap-4 items-center">
               <div className="pulse relative">
                 <span className="span1"></span>
@@ -22,10 +22,10 @@ function Cardforpagetwo() {
               <p>En cours</p>
             </div>
           </CardTitle>
-          <CardDescription>Elargissement des adhésions</CardDescription>
+          <CardDescription className="flex justify-center lg:justify-start">Elargissement des adhésions</CardDescription>
         </CardHeader>
         <CardContent>
-          <p>
+          <p className="text-justify">
             Après avoir créé leur association et de s&apos;être réunie en
             Assemblée Générale début 2024, la première action majeure décidée
             est d&apos;élargir les adhésions à AHG aux habitants de tous les
@@ -39,18 +39,18 @@ function Cardforpagetwo() {
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-xl lg:text-3xl">
+          <CardTitle className="text-xl lg:text-3xl flex justify-center lg:justify-start">
             <div className="flex gap-4 items-center">
               <img src="/Images/sablier.svg" alt="" className="h-[30px] w-[30px] sablierr" />
               <p>A venir</p>
             </div>
           </CardTitle>
-          <CardDescription>
+          <CardDescription className="flex justify-center lg:justify-start">
             Contestation, Recours administratif, Tractations
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <p>
+          <p className="text-justify">
             AHG prévoit de contester le PLUi lors de l&apos;enquête publique. Le
             cas échéant, elle établira un recours administratif. Elle prévoit
             également de tracter dans les espaces publiques, en sortie des

@@ -539,3 +539,26 @@ body {
 .sablierr{
   animation: rotatee 2s ease-in-out infinite;
 }
+
+.spear1 {
+  animation: spearrr 1.5s ease-in-out infinite ;
+}
+
+.spear2 {
+  animation: spearrr 1.5s ease-in-out infinite 0.25s ;
+}
+
+
+@keyframes spearrr{
+  0%{
+    transform: translate(0, 0);
+  }
+  25%{
+    transform: translate(40px, -20px);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
+
+

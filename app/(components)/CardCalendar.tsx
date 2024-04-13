@@ -10,7 +10,7 @@ import {
 function CardCalendar() {
   return (
     <div className="flex flex-col flex-wrap gap-2">
-      <Card className="">
+      <Card className="border-2 border-blue-500">
         <CardHeader className="p-3">
           <CardTitle className="text-xl lg:text-3xl">Tractation</CardTitle>
         </CardHeader>
@@ -21,7 +21,7 @@ function CardCalendar() {
         </CardContent>
       </Card>
 
-      <Card className="">
+      <Card className="border-2 border-blue-500">
         <CardHeader className="p-3">
           <CardTitle className="text-xl lg:text-3xl">Tractation</CardTitle>
         </CardHeader>

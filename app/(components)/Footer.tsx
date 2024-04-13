@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className="w-full p-6 bg-white mt-20">
       <h2 className="text-2xl font-bold">Contact</h2>
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col md:flex-row md:justify-between gap-2 md:gap-0">
         <div className="italic">
           <p>HameauGaulois@gmail.com</p>
           <p>06 05 04 03 02 </p>
@@ -17,7 +17,7 @@ function Footer() {
       </div>
       <Link
         href={"https://spontaneous-entremet-f15b4a.netlify.app/"}
-        className="flex justify-center italic text-sm"
+        className="flex justify-center text-center mt-2 lg:mt-0 italic text-sm"
       >
         Réalisé par Maxime Prévot - tous droits réservés{" "}
         <span className="text-xl">®</span>

@@ -94,16 +94,16 @@ export function NavigationMenuDemo() {
               <ListItem href="/Participation" title="Actions">
               <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
               </ListItem>
-              <ListItem href="/Participation/#calendrier" title="Calendrier">
+              <ListItem href="#calendrier" title="Calendrier">
                 <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
               </ListItem>
-              <ListItem href="/" title="Adhésion">
+              <ListItem href="#adhesion" title="Adhésion">
                 <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
               </ListItem>
-              <ListItem href="/" title="Dons">
+              <ListItem href="#dons" title="Dons">
                 <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
               </ListItem>
-              <ListItem href="/" title="Pétition">
+              <ListItem href="#petition" title="Pétition">
                 <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
               </ListItem>
             </ul>
