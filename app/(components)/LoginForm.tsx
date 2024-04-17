@@ -13,6 +13,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import GoogleSection from "./GoogleSection";
+import { Separator } from "@/components/ui/separator"
+
 function LoginForm() {
   const router = useRouter();
   //  const { toast } = useToast();
@@ -49,10 +52,13 @@ function LoginForm() {
       <CardHeader>
         <CardTitle>
           {" "}
-          <h2 className="text-3xl font-bold">Connexion</h2>
+          <p className="text-3xl font-bold">Connexion</p>
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-2">
+        <GoogleSection/>
+        <Separator className="my-4" />
+
         <form onSubmit={handleSignIn} method="post">
           <div className="space-y-1">
             <Label htmlFor="email" className="text-black">
@@ -76,11 +82,8 @@ function LoginForm() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <Input
-            type="submit"
-            value={"Se connecter"}
-            className="border-[#25723B] font-bold flex justify-center text-black hover:bg-[#25723B] ease-in-out duration-200 cursor-pointer"
-          />
+          <Button type="submit" className="mt-4">Me connecter</Button>
+
         </form>
       </CardContent>
     </Card>

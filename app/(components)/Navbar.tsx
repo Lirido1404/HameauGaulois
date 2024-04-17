@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 import { cn } from "@/lib/utils";
 import {
@@ -14,6 +15,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
+import Exit from "./Exit";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -33,12 +35,14 @@ const components: { title: string; href: string; description: string }[] = [
     href: "/",
     description:
       "For sighted users to preview content available behind a link.",
-  },{
+  },
+  {
     title: "Dons",
     href: "/",
     description:
       "For sighted users to preview content available behind a link.",
-  },{
+  },
+  {
     title: "Pétition",
     href: "/",
     description:
@@ -47,6 +51,8 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 export function NavigationMenuDemo() {
+  const { data: session } = useSession();
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -76,10 +82,15 @@ export function NavigationMenuDemo() {
                 </NavigationMenuLink>
               </li>
               <ListItem href="#pres" title="Présentation">
-                <p className="text-xs">Plonger dans l&apos;univers du hameau gaulois</p>
+                <p className="text-xs">
+                  Plonger dans l&apos;univers du hameau gaulois
+                </p>
               </ListItem>
               <ListItem href="#objectifs" title="Objectifs">
-                <p className="text-xs"> Découvrir ce qui détermine les troupes</p>
+                <p className="text-xs">
+                  {" "}
+                  Découvrir ce qui détermine les troupes
+                </p>
               </ListItem>
               <ListItem href="#historique" title="Historique">
                 <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
@@ -88,11 +99,13 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="colornavitem">Participer et soutenir</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="colornavitem">
+            Participer et soutenir
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className=" w-[400px] flex flex-wrap p-4 md:w-[500px] lg:w-[600px] ">              
+            <ul className=" w-[400px] flex flex-wrap p-4 md:w-[500px] lg:w-[600px] ">
               <ListItem href="/Participation" title="Actions">
-              <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
+                <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
               </ListItem>
               <ListItem href="#calendrier" title="Calendrier">
                 <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
@@ -109,20 +122,49 @@ export function NavigationMenuDemo() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem >
+        <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
-          <NavigationMenuLink className={`colornavitem ${navigationMenuTriggerStyle()}`} >
+            <NavigationMenuLink
+              className={`colornavitem ${navigationMenuTriggerStyle()}`}
+            >
               Contacts
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <NavigationMenuItem className="pl-12">
-          <Link href="/Account" legacyBehavior passHref>
-          <NavigationMenuLink className={`colornavitem ${navigationMenuTriggerStyle()}`} >
-              Login
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+        {session && (
+          <>
+            <NavigationMenuItem className="">
+              <Link href="/Date" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={`colornavitem ${navigationMenuTriggerStyle()}`}
+                >
+                  Ajout Date
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          </>
+        )}
+        {!session && (
+          <>
+            <NavigationMenuItem className="pl-12 ">
+              <Link href="/Account" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={`colornavitem2 ${navigationMenuTriggerStyle()}`}
+                >
+                  Login
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          </>
+        )}
+
+        {session && (
+          <>
+            <NavigationMenuItem className="pl-12">
+              <Exit />
+            </NavigationMenuItem>
+          </>
+        )}
       </NavigationMenuList>
     </NavigationMenu>
   );

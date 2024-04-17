@@ -8,17 +8,22 @@ import Img1 from "./(components)/Img1";
 import Img2 from "./(components)/Img2";
 import Img3 from "./(components)/Img3";
 import TimeLine2 from "./(components)/TimeLine2";
+import { getServerSession } from "next-auth";
+import { options } from "./api/auth/[...nextauth]/options";
 
-export default function Home() {
+
+export default async function Home() {
+  const session = await getServerSession(options);
+  
   return (
     <div className="mt-20">
       <Titre2 />
       <Commentaires />
       <h2
-        className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left underline"
+        className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left"
         id="pres"
       >
-        Présentation
+        Présentation 
       </h2>
       <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-20 justify-center w-[70%] mx-auto">
         <div className="flex justify-end items-end w-[50%]">
@@ -69,7 +74,7 @@ export default function Home() {
         <Texte1 />
       </div>
       <h2
-        className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left underline"
+        className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left "
         id="objectifs"
       >
         Objectifs
@@ -82,7 +87,7 @@ export default function Home() {
       <PhotoParticipants />
 
       <h2
-        className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left underline"
+        className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left "
         id="historique"
       >
         Historique

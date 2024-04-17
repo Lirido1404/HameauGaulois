@@ -6,6 +6,7 @@ import Mainnav from "./(components)/Mainnav";
 import FlecheRemonte from "./(components)/FlecheRemonte";
 import Footer from "./(components)/Footer";
 import BarreLecture from "./(components)/BarreLecture";
+import AuthProvider from "./(components)/AuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,14 +23,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="bg-[#08262E] flex flex-col-reverse">
-          <Footer />
-          <FlecheRemonte />
+        <AuthProvider>
+          <div className="bg-[#08262E] flex flex-col-reverse">
+            <Footer />
+            <FlecheRemonte />
 
-          {children}
-          <Mainnav />
-          <BarreLecture/>
-        </div>
+            {children}
+            <Mainnav />
+            <BarreLecture />
+          </div>
+        </AuthProvider>
       </body>
     </html>
   );

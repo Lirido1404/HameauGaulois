@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+
 import {
   Card,
   CardContent,
@@ -54,7 +56,7 @@ function RegisterForm() {
       <CardHeader>
         <CardTitle>
           {" "}
-          <h2 className="text-3xl font-bold">Inscription</h2>
+          <p className="text-3xl font-bold">Inscription</p>
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-2">
@@ -83,11 +85,7 @@ function RegisterForm() {
               placeholder="Mot de passe"
             />
           </div>
-          <Input
-            type="submit"
-            value={"Se connecter"}
-            className="border-[#25723B] font-bold flex justify-center text-black hover:bg-[#25723B] ease-in-out duration-200 cursor-pointer"
-          />
+          <Button type="submit" className="mt-4">M&apos;enregistrer</Button>
         </form>
       </CardContent>
     </Card>

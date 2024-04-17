@@ -343,7 +343,11 @@ body {
 }
 
 .colornavitem {
-  @apply bg-slate-200;
+  @apply bg-slate-200 text-black;
+}
+
+.colornavitem2 {
+  @apply bg-[#1A73E8] text-white hover:bg-[#1a51e8] duration-150 ease-in-out;
 }
 
 .torotate {

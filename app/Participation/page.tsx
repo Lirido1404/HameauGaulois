@@ -22,7 +22,7 @@ function page() {
         <Cardforpagetwo />
       </div>
       <h2
-        className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left underline"
+        className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left "
         id="calendrier"
       >
         Calendrier
@@ -41,7 +41,7 @@ function page() {
         <CardCalendar />
       </div>
       <h2
-        className=" w-[70%] flex justify-center lg:justify-start items-center mx-auto text-white font-bold  mt-24 text-sm md:text-base lg:text-2xl xl:text-5xl text-center lg:text-left underline"
+        className=" w-[70%] flex justify-center lg:justify-start items-center mx-auto text-white font-bold  mt-24 text-sm md:text-base lg:text-2xl xl:text-5xl text-center lg:text-left "
         id="adhesion"
       >
         Dons{" "}
