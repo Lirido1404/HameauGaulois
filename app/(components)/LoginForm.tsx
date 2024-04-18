@@ -5,16 +5,9 @@ import { Input } from "@/components/ui/input";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import GoogleSection from "./GoogleSection";
-import { Separator } from "@/components/ui/separator"
+import { Separator } from "@/components/ui/separator";
 
 function LoginForm() {
   const router = useRouter();
@@ -38,6 +31,8 @@ function LoginForm() {
     const result = await signIn("credentials", {
       email,
       password,
+      redirect: true,
+      callbackUrl: "/",
     });
 
     if (result && !result.error) {
@@ -56,7 +51,7 @@ function LoginForm() {
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-2">
-        <GoogleSection/>
+        <GoogleSection />
         <Separator className="my-4" />
 
         <form onSubmit={handleSignIn} method="post">
@@ -82,8 +77,9 @@ function LoginForm() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <Button type="submit" className="mt-4">Me connecter</Button>
-
+          <Button type="submit" className="mt-4">
+            Me connecter
+          </Button>
         </form>
       </CardContent>
     </Card>
