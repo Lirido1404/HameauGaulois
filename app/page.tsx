@@ -11,10 +11,9 @@ import TimeLine2 from "./(components)/TimeLine2";
 import { getServerSession } from "next-auth";
 import { options } from "./api/auth/[...nextauth]/options";
 
-
 export default async function Home() {
   const session = await getServerSession(options);
-  
+
   return (
     <div className="mt-20">
       <Titre2 />
@@ -23,11 +22,11 @@ export default async function Home() {
         className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left"
         id="pres"
       >
-        Présentation 
+        Présentation
       </h2>
-      <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-20 justify-center w-[70%] mx-auto">
-        <div className="flex justify-end items-end w-[50%]">
-          <p className="text-white text-justify p-2">
+      <div className="flex flex-col gap-0 lg:flex-row mt-8 lg:mt-20 justify-center w-[70%] mx-auto">
+        <div className="flex justify-center items-center w-[50%]">
+          <p className="text-white text-justify px-16 py-2 ">
             Le quartier du Hameau est un quartier centenaire du Sud Parisien
             dont vous trouverez ici,
             <a
@@ -53,8 +52,8 @@ export default async function Home() {
 
       <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-0 justify-center w-[70%] mx-auto">
         <Img3 />
-        <div className="w-[50%]">
-          <p className="text-white text-justify p-2">
+        <div className="flex justify-center items-center w-[50%]">
+          <p className="text-white text-justify px-16 py-2 ">
             En particulier, le projet de PLUi prévoit de faire construire des
             bâtiments collectifs de logements (bâtiments d&apos;appartements) de
             5 niveaux, après avoir rasé le quartier. <br />
@@ -80,7 +79,6 @@ export default async function Home() {
         Objectifs
       </h2>
 
-      
       <div className="mt-20">
         <TimeLine2 />
       </div>
@@ -93,12 +91,12 @@ export default async function Home() {
         Historique
       </h2>
 
-      <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-20 justify-center w-[70%] mx-auto">
-        <div className="w-[50%] flex justify-end lg:border-b-4 lg:border-r-4 border-white p-1 rounded-lg ">
+      <div className="flex flex-col gap-0 lg:flex-row mt-8 lg:mt-20 justify-center w-[70%] mx-auto">
+        <div className="w-[50%] flex justify-end lg:border-b-4 lg:border-r-4 border-white p-1 ">
           <Vid2 />
         </div>
-        <div className="w-[50%] ">
-          <p className="text-white text-justify p-2">
+        <div className="flex justify-center items-center w-[50%]">
+          <p className="text-white text-justify px-16 py-10 ">
             Avant de s&apos;appeler Plessis Robinson, notre ville
             s&apos;appelait Plessis Picquet. Au 19ème siècle, notre quartier
             n&apos;existait pas. Il n&apos;y avait que des champs et des prés.
@@ -120,8 +118,8 @@ export default async function Home() {
       </div>
 
       <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-0 justify-center w-[70%] mx-auto">
-        <div className="w-[50%] ">
-          <p className="text-white text-justify p-2">
+        <div className="flex justify-center items-center w-[50%]">
+          <p className="text-white text-justify px-16 py-2 ">
             Une vieille dame est toujours propriétaire de la maison que son
             grand père a construit de ses mains. <br /> <br />
             2 belles-soeurs, toutes deux ayant passé les 90 ans, habitent

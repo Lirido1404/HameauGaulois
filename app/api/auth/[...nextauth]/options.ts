@@ -16,7 +16,7 @@ export const options = {
     GoogleProvider({
       profile(profile) {
         let userRole = "noroleuser";
-        if (profile?.email === "1234@gmail.com") {
+        if (profile?.email === "maxime.prevot1804kz@gmail.com") {
           userRole = "Prov";
         }
         return {

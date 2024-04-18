@@ -13,9 +13,9 @@ function Img3() {
         stiffness: 500,
         damping: 22,
       }}
-      className="w-[50%] lg:border-t-4 lg:border-r-4 border-white p-1 rounded"
+      className="w-[50%] lg:border-t-4 lg:border-r-4 border-white p-4"
     >
-      <img src={"/Images/AvRue.jpg"} alt="Gaulois" className=" rounded" />
+      <img src={"/Images/AvRue.jpg"} alt="Gaulois" className=" rounded-2xl" />
     </motion.div>
   );
 }

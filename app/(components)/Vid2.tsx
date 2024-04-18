@@ -14,10 +14,10 @@ function Vid2() {
         stiffness: 500,
         damping: 22,
       }}
-      className="w-full h-full"
+      className="w-full h-full p-4"
     >
       <iframe
-        className="w-full h-full rounded-lg"
+        className="w-full h-full rounded-2xl"
         src="https://www.youtube.com/embed/wHPNlgCMgVY?si=yTjdrzLR63CXYAlB"
         title="YouTube video player"
         frameBorder={0}

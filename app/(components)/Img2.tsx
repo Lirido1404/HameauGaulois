@@ -13,9 +13,9 @@ function Img2() {
         stiffness: 500,
         damping: 22,
       }}
-      className="w-[50%] border-white p-1 lg:border-b-4 lg:border-l-4 rounded"
+      className="w-[50%] border-white p-4 lg:border-b-4 lg:border-l-4 "
     >
-      <img src={"/Images/mapsh.jpg"} alt="Gaulois" className="rounded-lg" />
+      <img src={"/Images/mapsh.jpg"} alt="Gaulois" className="rounded-2xl" />
     </motion.div>
   );
 }
