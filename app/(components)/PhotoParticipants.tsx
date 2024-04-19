@@ -42,28 +42,28 @@ function PhotoParticipants() {
         </div>
         <div className="flex flex-col">
           <Avatar className="w-40 h-40">
-            <AvatarImage src="Images/Antoinee.jpg" className="object-cover" />
+            <AvatarImage src="Images/antoinee.jpg" className="object-cover" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="text-center text-white font-bold"> Antoinee </p>
         </div>
         <div className="flex flex-col">
           <Avatar className="w-40 h-40">
-            <AvatarImage src="Images/Antoinee.jpg" className="object-cover" />
+            <AvatarImage src="Images/antoinee.jpg" className="object-cover" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="text-center text-white font-bold"> Antoinee </p>
         </div>
         <div className="flex flex-col">
           <Avatar className="w-40 h-40">
-            <AvatarImage src="Images/Antoinee.jpg" className="object-cover" />
+            <AvatarImage src="Images/antoinee.jpg" className="object-cover" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="text-center text-white font-bold"> Antoinee </p>
         </div>
         <div className="flex flex-col">
           <Avatar className="w-40 h-40">
-            <AvatarImage src="Images/Antoinee.jpg" className="object-cover" />
+            <AvatarImage src="Images/antoinee.jpg" className="object-cover" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="text-center text-white font-bold"> Antoinee </p>
@@ -74,63 +74,63 @@ function PhotoParticipants() {
       <div className="logos-slide2 flex gap-20 ">
       <div className="flex flex-col">
           <Avatar className="w-40 h-40">
-            <AvatarImage src="Images/Antoinee.jpg" className="object-cover" />
+            <AvatarImage src="Images/antoinee.jpg" className="object-cover" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="text-center text-white font-bold"> Antoinee </p>
         </div>
         <div className="flex flex-col">
           <Avatar className="w-40 h-40">
-            <AvatarImage src="Images/Antoinee.jpg" className="object-cover" />
+            <AvatarImage src="Images/antoinee.jpg" className="object-cover" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="text-center text-white font-bold"> Antoinee </p>
         </div>
         <div className="flex flex-col">
           <Avatar className="w-40 h-40">
-            <AvatarImage src="Images/Antoinee.jpg" className="object-cover" />
+            <AvatarImage src="Images/antoinee.jpg" className="object-cover" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="text-center text-white font-bold"> Antoinee </p>
         </div>
         <div className="flex flex-col">
           <Avatar className="w-40 h-40">
-            <AvatarImage src="Images/Antoinee.jpg" className="object-cover" />
+            <AvatarImage src="Images/antoinee.jpg" className="object-cover" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="text-center text-white font-bold"> Antoinee </p>
         </div>
         <div className="flex flex-col">
           <Avatar className="w-40 h-40">
-            <AvatarImage src="Images/Antoinee.jpg" className="object-cover" />
+            <AvatarImage src="Images/antoinee.jpg" className="object-cover" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="text-center text-white font-bold"> Antoinee </p>
         </div>
         <div className="flex flex-col">
           <Avatar className="w-40 h-40">
-            <AvatarImage src="Images/Antoinee.jpg" className="object-cover" />
+            <AvatarImage src="Images/antoinee.jpg" className="object-cover" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="text-center text-white font-bold"> Antoinee </p>
         </div>
         <div className="flex flex-col">
           <Avatar className="w-40 h-40">
-            <AvatarImage src="Images/Antoinee.jpg" className="object-cover" />
+            <AvatarImage src="Images/antoinee.jpg" className="object-cover" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="text-center text-white font-bold"> Antoinee </p>
         </div>
         <div className="flex flex-col">
           <Avatar className="w-40 h-40">
-            <AvatarImage src="Images/Antoinee.jpg" className="object-cover" />
+            <AvatarImage src="Images/antoinee.jpg" className="object-cover" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="text-center text-white font-bold"> Antoinee </p>
         </div>
         <div className="flex flex-col">
           <Avatar className="w-40 h-40">
-            <AvatarImage src="Images/Antoinee.jpg" className="object-cover" />
+            <AvatarImage src="Images/antoinee.jpg" className="object-cover" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="text-center text-white font-bold"> Antoinee </p>
