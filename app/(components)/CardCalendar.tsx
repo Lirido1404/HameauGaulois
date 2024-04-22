@@ -21,7 +21,6 @@ async function CardCalendar() {
 
   return (
     <>
-    <p className="text-white font-bold text-3xl"> Hey </p>
     <Card className="outline outline-2 outline-offset-2 outline-blue-500">
         <CardHeader className="p-3">
           <CardTitle className="text-xl lg:text-3xl">Tractation</CardTitle>
