@@ -58,13 +58,15 @@ function DateForm() {
   return (
     <form onSubmit={handleSubmit} method="post">
       <div className="space-y-1">
-        <Label htmlFor="date">Date</Label>
-        <Calendar
-          mode="single"
-          selected={date}
-          onSelect={setDate}
-          className="rounded-md border shadow bg-white text-black"
-        />
+        <Label htmlFor="date" className="text-white">Date</Label>
+        
+          <Calendar
+            mode="single"
+            selected={date}
+            onSelect={setDate}
+            className="rounded-md border shadow bg-white text-black w-64"
+          />
+        
         <p className="text-white">{date?.toLocaleDateString()}</p>
       </div>
       <div className="space-y-1">
