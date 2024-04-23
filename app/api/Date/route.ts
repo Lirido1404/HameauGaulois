@@ -16,9 +16,7 @@ export async function POST(req: Request) {
 
 export async function fetchDates() {
   try {
-    const dates = await Date.find();
-    return dates; 
-   
+    return await Date.find();
   } catch (err) {
     return NextResponse.json({ message: "Error for Date", err }, { status: 500 });
   }

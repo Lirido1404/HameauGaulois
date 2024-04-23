@@ -17,38 +17,7 @@ import {
 import Image from "next/image";
 import Exit from "./Exit";
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Actions",
-    href: "/",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Calendrier",
-    href: "/",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Adhésion",
-    href: "/",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Dons",
-    href: "/",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Pétition",
-    href: "/",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-];
+
 
 export function NavigationMenuDemo() {
   const { data: session } = useSession();
@@ -99,7 +68,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="colornavitem">
+          <NavigationMenuTrigger className="colornavitem focus:bg-red-500">
             Participer et soutenir
           </NavigationMenuTrigger>
           <NavigationMenuContent>
