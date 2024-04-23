@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+
 import Date from "@/app/(models)/DatePost";
 
 export async function POST(req: Request) {
