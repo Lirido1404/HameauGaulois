@@ -14,10 +14,3 @@ export async function POST(req: Request) {
   }
 }
 
-export async function fetchDates() {
-  try {
-    return await Date.find();
-  } catch (err) {
-    return NextResponse.json({ message: "Error for Date", err }, { status: 500 });
-  }
-}
