@@ -68,7 +68,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="colornavitem focus:bg-red-500">
+          <NavigationMenuTrigger className="colornavitem">
             Participer et soutenir
           </NavigationMenuTrigger>
           <NavigationMenuContent>

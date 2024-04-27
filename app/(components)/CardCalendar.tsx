@@ -1,7 +1,7 @@
 import React from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import CardCalendar2 from "./CardCalendar2";
-import {fetchDates} from "../api/Date/route";
+import {fetchDates} from "../api/Date/fetchDataa"; // Ajustement de l'import
 
 async function CardCalendar() {
   const datess = await fetchDates();
