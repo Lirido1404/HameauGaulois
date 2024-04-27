@@ -35,7 +35,7 @@ function FlecheRemonte() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="h-12 w-12 bg-[#fff] rounded-full border-2 border-black fixed bottom-4 right-4 cursor-pointer flex justify-center items-center p-2 hover:bg-slate-200 duration-100 ease-in-out"
+          className="h-12 w-12 bg-[#fff] rounded-full border-2 border-[#1A73E8] fixed bottom-4 right-4 cursor-pointer flex justify-center items-center p-2 hover:bg-slate-200 duration-100 ease-in-out"
           onClick={handleClick}
         >
           <Image src="/Images/arrow.svg" width={30} height={30} alt="arrow" />
