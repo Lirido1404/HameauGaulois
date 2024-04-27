@@ -60,7 +60,7 @@ function CardCalendar2({ newdate }: any) {
           className="outline outline-2 outline-offset-2 outline-blue-500"
         >
           <CardHeader className="p-3">
-            <CardTitle className="text-xl lg:text-3xl">{date.title} {date.date} </CardTitle>
+            <CardTitle className="text-xl lg:text-3xl">{date.title} </CardTitle>
           </CardHeader>
           <CardContent className="p-3">
             <p className="text-sm max-w-[70ch]">{date.content}</p>

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Calendar } from "@/components/ui/calendar";
 import { useDateStore } from "../(store)/store";
 import { isValid, format } from "date-fns";
+import { DayModifiers } from "react-day-picker";
 
 function CalandarComp() {
   const [date, setDate] = useState<Date | undefined>(new Date());
@@ -17,21 +18,34 @@ function CalandarComp() {
 
   const newDate = useDateStore((state) => state.newDate);
 
-  const bookedDays = [new Date(2024, 4, 3), new Date(2024, 4, 4)];
-  let x ="hey";
+  // Convertir les chaînes de dates en objets de date JavaScript
+  const convertedNewDate = newDate?.map((event: any) => {
+    const dateParts = event.date.split("/"); // Sépare la chaîne en parties en fonction des "/"
+    const formattedDate = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`; // Reformule la date avec des "-"
+    return {
+      ...event,
+      date: formattedDate,
+    };
+  });
 
-  const convertedDates = newDate // Assurez-vous que newDate est le tableau contenant les objets avec une propriété "date"
-    ?.map((dateObj: any) => {
-      const date = new Date(dateObj.date);
-      return isValid(date) ? format(date, "dd-MM-yyyy") : null;
-    })
-    .filter(Boolean);
+  const datesSepareDesObjets = convertedNewDate?.map(
+    (event: any) => event.date
+  );
 
-  const datesArray = newDate?.map((dateObj: any) => new Date(dateObj.date));
+  const datesconverties = convertedNewDate?.map((event: any) => {
+    const dateParts = event.date.split("-"); // Sépare la chaîne en parties en fonction des "-"
+    const year = parseInt(dateParts[0]); // Année
+    const month = parseInt(dateParts[1]) - 1; // Mois (soustrayez 1 car les mois dans JavaScript sont indexés à partir de 0)
+    const day = parseInt(dateParts[2]); // Jour
+    return new Date(year, month, day);
+  });
+
+  const bookedDays = convertedNewDate?.map((event: any) => event.date);
 
   const bookedStyle = { border: "2px solid #1A73E8", borderRadius: "6px" };
 
-  const modifiers = { booked: convertedDates };
+  // Définir le type de modifiers explicitement
+  const modifiers: DayModifiers = { booked: datesconverties || [] };
   const modifiersStyles = { booked: bookedStyle };
 
   return (
@@ -45,11 +59,8 @@ function CalandarComp() {
         modifiersStyles={modifiersStyles}
       />
       <p className="text-center text-white">{vraidate}</p>
-      {convertedDates?.map((date, index) => (
-        <div key={index} className="text-red-500 font-bold">
-          {date}
-        </div>
-      ))}
+
+    
     </div>
   );
 }
