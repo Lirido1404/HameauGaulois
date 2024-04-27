@@ -52,14 +52,13 @@ function CalandarComp() {
     <div>
       <Calendar
         mode="single"
+        numberOfMonths={2}
         selected={date}
         onSelect={setDate}
         className="rounded-md border shadow bg-white text-black"
         modifiers={modifiers}
         modifiersStyles={modifiersStyles}
       />
-
-    
     </div>
   );
 }

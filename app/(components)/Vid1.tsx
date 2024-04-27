@@ -17,7 +17,7 @@ function Vid1() {
           duration: 0.6,
           delay: 0.5,
         }}
-        className="w-[300px] h-[168px] lg:w-[560px] lg:h-[315px]"
+        className="w-[300px] h-[168px] lg:w-[560px] lg:h-[315px] rounded-lg"
       >
         <iframe
           className="w-full h-full rounded-lg"

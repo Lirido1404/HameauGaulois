@@ -29,13 +29,13 @@ function Texte1() {
       <AnimatePresence>
         {voirPlus && (
           <motion.div
-            className="overflow-hidden"
+            className="overflow-hidden "
             initial={{ height: 0 }}
             animate={{ height: "auto" }}
             exit={{ height: 0 }}
             transition={{ duration: 0.75 }}
           >
-            <p className="text-white text-justify mt-4 mx-auto w-[70%]">
+            <p className="text-white text-justify mt-4 mx-auto w-[50%] border-2 border-white p-4 rounded">
               {" "}
               Les habitants du quartiers ont donc décidé de se mobiliser afin de
               contrer le projet de zonage les concernant. A défaut de succès,

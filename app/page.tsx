@@ -10,6 +10,8 @@ import Img3 from "./(components)/Img3";
 import TimeLine2 from "./(components)/TimeLine2";
 import { getServerSession } from "next-auth";
 import { options } from "./api/auth/[...nextauth]/options";
+import ScrollAreaComm from "./(components)/ScrollAreaComm";
+import Link from "next/link";
 
 export default async function Home() {
   const session = await getServerSession(options);
@@ -17,7 +19,10 @@ export default async function Home() {
   return (
     <div className="mt-20">
       <Titre2 />
-      <Commentaires />
+
+      <div className="w-[70%] mx-auto">
+        <ScrollAreaComm />
+      </div>
       <h2
         className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left"
         id="pres"
@@ -79,6 +84,14 @@ export default async function Home() {
         Objectifs
       </h2>
 
+      <div className="w-[70%] mx-auto">
+        <Link href={"/Participation"} className="flex justify-start">
+          <button className="text-white text-xl bg-[#1A73E8] px-8 py-2 rounded border-1 border-[#EDEDED] mt-6 hover:bg-[#185ABC] ease-in-out duration-100 shadow">
+            Voir les évènements proches
+          </button>
+        </Link>
+      </div>
+
       <div className="mt-20">
         <TimeLine2 />
       </div>
@@ -92,7 +105,7 @@ export default async function Home() {
       </h2>
 
       <div className="flex flex-col gap-0 lg:flex-row mt-8 lg:mt-20 justify-center w-[70%] mx-auto">
-        <div className="w-[50%] flex justify-end lg:border-b-4 lg:border-r-4 border-white p-1 ">
+        <div className="w-[50%] flex justify-end lg:border-b-4 lg:border-r-4 border-white p-1 rounded-lg ">
           <Vid2 />
         </div>
         <div className="flex justify-center items-center w-[50%]">
@@ -134,6 +147,11 @@ export default async function Home() {
         </div>
         <Img1 />
       </div>
+      <Link href={"/Participation"} className="flex justify-center mt-10">
+        <button className="text-white text-xl bg-[#1A73E8] px-8 py-2 rounded border-1 border-[#EDEDED] mt-6 hover:bg-[#185ABC] ease-in-out duration-100 shadow">
+          Page de présentation des actions
+        </button>
+      </Link>
     </div>
   );
 }

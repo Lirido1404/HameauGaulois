@@ -1,15 +1,9 @@
 "use client";
 import React, { useEffect } from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useDateStore } from "../(store)/store";
 import { Separator } from "@/components/ui/separator";
+import { motion } from "framer-motion";
 
 function CardCalendar2({ newdate }: any) {
   const date = useDateStore((state) => state.date);
@@ -34,7 +28,11 @@ function CardCalendar2({ newdate }: any) {
       <Separator className="mt-2 w-[50%] mx-auto" />
 
       {truedate.length === 0 && (
-        <div className="mt-2">
+        <motion.div
+          className="mt-2"
+          initial={{ opacity: 0, y: -20, scale: 1.2 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+        >
           <Card className="rounded overflow-hidden w-full">
             <CardHeader className="p-0"></CardHeader>
             <CardContent className="p-1">
@@ -44,20 +42,30 @@ function CardCalendar2({ newdate }: any) {
               </span>
             </CardContent>
           </Card>
-        </div>
+        </motion.div>
       )}
 
-      {truedate.map((date: any) => (
-        <Card className="rounded overflow-hidden mt-2 w-full" key={date._id}>
-          <CardHeader className="p-2 font-bold"> {date.title} </CardHeader>
+      {truedate.map((date: any, index: number) => (
+        <motion.div
+          key={date._id}
+          className="overflow-hidden mt-2 w-full"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0, transition: { delay: index * 0.1 } }}
+        >
+          <Card className="rounded">
+            <CardHeader className="p-2 font-bold  ">{date.title}</CardHeader>
 
-          <CardContent className="p-1">
-            <span className="text-sm flex items-center">
-            <Separator className="h-6 w-[2px] rounded ml-2 bg-[#1A73E8]" orientation="vertical" />
-              <p className="ml-1 lg:w-[40ch]"> {date.content} </p>
-            </span>
-          </CardContent>
-        </Card>
+            <CardContent className="p-1">
+              <span className="text-sm flex items-center">
+                <Separator
+                  className="h-6 w-[2px] rounded ml-2 bg-[#1A73E8]"
+                  orientation="vertical"
+                />
+                <p className="ml-1 lg:w-[40ch]">{date.content}</p>
+              </span>
+            </CardContent>
+          </Card>
+        </motion.div>
       ))}
     </div>
   );
