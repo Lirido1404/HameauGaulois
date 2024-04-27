@@ -18,6 +18,7 @@ function CalandarComp() {
   const newDate = useDateStore((state) => state.newDate);
 
   const bookedDays = [new Date(2024, 4, 3), new Date(2024, 4, 4)];
+  let x ="hey";
 
   const convertedDates = newDate // Assurez-vous que newDate est le tableau contenant les objets avec une propriété "date"
     ?.map((dateObj: any) => {
