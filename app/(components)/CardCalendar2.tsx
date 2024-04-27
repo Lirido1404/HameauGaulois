@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { useDateStore } from "../(store)/store";
+import { Separator } from "@/components/ui/separator";
 
 function CardCalendar2({ newdate }: any) {
   const date = useDateStore((state) => state.date);
@@ -26,48 +27,39 @@ function CardCalendar2({ newdate }: any) {
   }, [newdate, date, setNewDate]);
 
   return (
-    <>
+    <div>
+      <p className="text-white  rounded text-center">
+        Emploi du temps pour le <span className="font-bold">{date}</span>{" "}
+      </p>
+      <Separator className="mt-2 w-[50%] mx-auto" />
+
       {truedate.length === 0 && (
-        <div>
-          <Card className="outline outline-2 outline-offset-2 outline-red-500">
-            <CardHeader className="p-3">
-              <div className="flex justify-center gap-2 items-center">
-                <CardTitle className="text-xl lg:text-3xl text-center">
-                  Repos
-                </CardTitle>
-                <span className="flex justify-center">
-                  {" "}
-                  <img
-                    src="/Images/moon.svg"
-                    className="w-12 h-12 moon"
-                    alt=""
-                  />{" "}
-                </span>
-              </div>
-            </CardHeader>
-            <CardContent className="p-3">
-              <p className="text-2xl">
-                Il n&apos;y a pas d&apos;évènement aujourd&apos;hui
-              </p>
+        <div className="mt-2">
+          <Card className="rounded overflow-hidden">
+            <CardHeader className="p-0"></CardHeader>
+            <CardContent className="p-1">
+              <span className="text-sm flex items-center">
+                <img src="/Images/crosss.svg" alt="" className="w-6 h-6" />
+                <p>Il n&apos;y a pas d&apos;évènement aujourd&apos;hui</p>
+              </span>
             </CardContent>
           </Card>
         </div>
       )}
 
       {truedate.map((date: any) => (
-        <Card
-          key={date._id}
-          className="outline outline-2 outline-offset-2 outline-blue-500"
-        >
-          <CardHeader className="p-3">
-            <CardTitle className="text-xl lg:text-3xl">{date.title} </CardTitle>
-          </CardHeader>
-          <CardContent className="p-3">
-            <p className="text-sm max-w-[70ch]">{date.content}</p>
+        <Card className="rounded overflow-hidden mt-2 w-full" key={date._id}>
+          <CardHeader className="p-2 font-bold"> {date.title} </CardHeader>
+
+          <CardContent className="p-1">
+            <span className="text-sm flex items-center">
+            <Separator className="h-6 w-[2px] rounded ml-2 bg-[#1A73E8]" orientation="vertical" />
+              <p className="ml-1"> {date.content} </p>
+            </span>
           </CardContent>
         </Card>
       ))}
-    </>
+    </div>
   );
 }
 

@@ -27,18 +27,19 @@ function page() {
       >
         Calendrier
       </h2>
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-4 w-[70%] mx-auto mt-20 ">
+      <div className="flex flex-col lg:flex-row justify-center  gap-4 w-[70%] mx-auto mt-20 ">
         <div className="flex flex-col lg:flex-row gap-4">
           <CalandarComp />
           <div className="p-4 hidden lg:flex">
             <Separator orientation="vertical" />
           </div>
-          <div className="p-4">
+          <div className="p-4 lg:hidden">
             <Separator />
           </div>
         </div>
 
-        <CardCalendar />
+          <CardCalendar />
+        
       </div>
       <h2
         className=" w-[70%] flex justify-center lg:justify-start items-center mx-auto text-white font-bold  mt-24 text-sm md:text-base lg:text-2xl xl:text-5xl text-center lg:text-left "
@@ -58,7 +59,9 @@ function page() {
       <div className="w-[70%] mx-auto flex flex-col xl:flex-row mt-20 gap-8">
         <Card>
           <CardHeader>
-            <CardTitle className="text-xl lg:text-3xl text-center xl:text-left">Dons</CardTitle>
+            <CardTitle className="text-xl lg:text-3xl text-center xl:text-left">
+              Dons
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-justify">
@@ -76,7 +79,9 @@ function page() {
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle className="text-xl lg:text-3xl text-center xl:text-left">Adhésions</CardTitle>
+            <CardTitle className="text-xl lg:text-3xl text-center xl:text-left">
+              Adhésions
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-justify">
@@ -95,7 +100,9 @@ function page() {
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle className="text-xl lg:text-3xl text-center xl:text-left">Pétitions</CardTitle>
+            <CardTitle className="text-xl lg:text-3xl text-center xl:text-left">
+              Pétitions
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-justify">

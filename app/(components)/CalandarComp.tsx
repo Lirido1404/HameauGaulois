@@ -58,7 +58,6 @@ function CalandarComp() {
         modifiers={modifiers}
         modifiersStyles={modifiersStyles}
       />
-      <p className="text-center text-white">{vraidate}</p>
 
     
     </div>
