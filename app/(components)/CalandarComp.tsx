@@ -2,14 +2,12 @@
 import React, { useEffect, useState } from "react";
 import { Calendar } from "@/components/ui/calendar";
 import { useDateStore } from "../(store)/store";
+import { isValid, format } from "date-fns";
 
 function CalandarComp() {
   const [date, setDate] = useState<Date | undefined>(new Date());
   const vraidate = date?.toLocaleDateString();
-  const setDateInStore = useDateStore((state) => state.setDate); // Fonction pour mettre à jour la date dans le store
-  // Utiliser useEffect pour mettre à jour la date dans le store lorsque la date change
-
-
+  const setDateInStore = useDateStore((state) => state.setDate);
 
   useEffect(() => {
     if (vraidate) {
@@ -17,14 +15,22 @@ function CalandarComp() {
     }
   }, [vraidate, setDateInStore]);
 
-  // Ajout des dates réservées pour les 3 et 4 mai
+  const newDate = useDateStore((state) => state.newDate);
+
   const bookedDays = [new Date(2024, 4, 3), new Date(2024, 4, 4)];
 
-  // Style pour les jours réservés
+  const convertedDates = newDate // Assurez-vous que newDate est le tableau contenant les objets avec une propriété "date"
+    ?.map((dateObj: any) => {
+      const date = new Date(dateObj.date);
+      return isValid(date) ? format(date, "dd-MM-yyyy") : null;
+    })
+    .filter(Boolean);
+
+  const datesArray = newDate?.map((dateObj: any) => new Date(dateObj.date));
+
   const bookedStyle = { border: "2px solid #1A73E8", borderRadius: "6px" };
 
-  // Modificateurs pour les jours réservés avec leur style
-  const modifiers = { booked: bookedDays };
+  const modifiers = { booked: convertedDates };
   const modifiersStyles = { booked: bookedStyle };
 
   return (
@@ -34,10 +40,15 @@ function CalandarComp() {
         selected={date}
         onSelect={setDate}
         className="rounded-md border shadow bg-white text-black"
-        modifiers={modifiers} // Utilisation des modificateurs pour indiquer les jours réservés
-        modifiersStyles={modifiersStyles} // Utilisation des styles pour les modificateurs
+        modifiers={modifiers}
+        modifiersStyles={modifiersStyles}
       />
       <p className="text-center text-white">{vraidate}</p>
+      {convertedDates?.map((date, index) => (
+        <div key={index} className="text-red-500 font-bold">
+          {date}
+        </div>
+      ))}
     </div>
   );
 }
