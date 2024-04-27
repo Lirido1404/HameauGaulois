@@ -35,7 +35,7 @@ function CardCalendar2({ newdate }: any) {
 
       {truedate.length === 0 && (
         <div className="mt-2">
-          <Card className="rounded overflow-hidden">
+          <Card className="rounded overflow-hidden w-full">
             <CardHeader className="p-0"></CardHeader>
             <CardContent className="p-1">
               <span className="text-sm flex items-center">
@@ -54,7 +54,7 @@ function CardCalendar2({ newdate }: any) {
           <CardContent className="p-1">
             <span className="text-sm flex items-center">
             <Separator className="h-6 w-[2px] rounded ml-2 bg-[#1A73E8]" orientation="vertical" />
-              <p className="ml-1"> {date.content} </p>
+              <p className="ml-1 lg:w-[40ch]"> {date.content} </p>
             </span>
           </CardContent>
         </Card>
