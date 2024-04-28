@@ -7,6 +7,8 @@ import FlecheRemonte from "./(components)/FlecheRemonte";
 import Footer from "./(components)/Footer";
 import BarreLecture from "./(components)/BarreLecture";
 import AuthProvider from "./(components)/AuthProvider";
+import { Toaster } from "@/components/ui/toaster";
+import AjoutNotifAuth from "./(components)/AjoutNotifAuth";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +25,9 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={inter.className}>
+        <Toaster />
         <AuthProvider>
+          <AjoutNotifAuth />
           <div className="bg-[#08262E] flex flex-col-reverse">
             <Footer />
             <FlecheRemonte />

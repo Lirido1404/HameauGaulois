@@ -4,8 +4,13 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useDateStore } from "../(store)/store";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
-
+import { ToastAction } from "@/components/ui/toast";
+import { useToast } from "@/components/ui/use-toast";
+import { useRouter } from "next/navigation";
 function CardCalendar2({ newdate }: any) {
+  const router = useRouter();
+  const { toast } = useToast();
+
   const date = useDateStore((state) => state.date);
   const setNewDate = useDateStore((state) => state.setNewDate);
 
@@ -19,6 +24,74 @@ function CardCalendar2({ newdate }: any) {
       setNewDate(newdate);
     }
   }, [newdate, date, setNewDate]);
+
+  const refreshPage = () => {
+    router.refresh();
+  };
+
+  useEffect(() => {
+    if (truedate.length === 0 && newdate) {
+      toast({
+        title: "Pas d'évènement ...",
+        description: (
+          <span className="flex gap-1 items-center">
+            
+            <img
+              src="/Images/crosss.svg"
+              alt="croix"
+              className="w-6 h-6"
+            />{" "}
+            Aucun évènement n&apos;a été prévu pour ce
+            <span className="font-bold">{date}</span>
+          </span>
+        ),
+      });
+    } else if (truedate.length !== 0 && newdate) {
+      toast({
+        title: "Ça bouge !",
+        description: (
+          <span className="flex gap-1 items-center">
+            
+            <img
+              src="/Images/checkk.svg"
+              alt="check"
+              className="w-6 h-6"
+            />
+            {truedate.length} évènement{truedate.length == 1 ? "" : "s"} le
+            <span className="font-bold">{date}</span>
+          </span>
+        ),
+        action: <ToastAction altText="Ajouter" className="border-[#00ff59]" onClick={()=>toast({
+          title: "La fonctionnalité arrive ...",
+          description: (
+            <span className="flex gap-1 items-center">
+              
+              <img
+                src="/Images/timee.svg"
+                alt="croix"
+                className="w-6 h-6"
+              />
+              Ce n&apos;est qu&apos;une question de temps
+            </span>
+          ),
+        })}>Me prévenir</ToastAction>,
+      });
+    }
+
+    if (!newdate) {
+      toast({
+        variant: "destructive",
+        title: "Evènements inaccessibles...",
+        description:
+          "Nous n'avons pas pu récupérer les données concernant les évènements.",
+        action: (
+          <ToastAction altText="Try again" onClick={refreshPage}>
+            Réessayer
+          </ToastAction>
+        ),
+      });
+    }
+  }, [date, newdate]);
 
   return (
     <div>
