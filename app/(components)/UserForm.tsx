@@ -96,7 +96,7 @@ function UserForm() {
   </div> */}
 
       <div>
-        <Tabs defaultValue="Connexion" className="w-[400px]">
+        <Tabs defaultValue="Connexion" className="lg:w-[400px] w-[300px]">
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="Connexion">Connexion</TabsTrigger>
             <TabsTrigger value="Inscription">Inscription</TabsTrigger>

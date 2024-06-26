@@ -50,18 +50,18 @@ export function NavigationMenuDemo() {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="#pres" title="Présentation">
+              <ListItem href="/#pres" title="Présentation">
                 <p className="text-xs">
                   Plonger dans l&apos;univers du hameau gaulois
                 </p>
               </ListItem>
-              <ListItem href="#objectifs" title="Objectifs">
+              <ListItem href="/#objectifs" title="Objectifs">
                 <p className="text-xs">
                   {" "}
                   Découvrir ce qui détermine les troupes
                 </p>
               </ListItem>
-              <ListItem href="#historique" title="Historique">
+              <ListItem href="/#historique" title="Historique">
                 <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
               </ListItem>
             </ul>
@@ -76,22 +76,17 @@ export function NavigationMenuDemo() {
               <ListItem href="/Participation" title="Actions">
                 <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
               </ListItem>
-              <ListItem href="#calendrier" title="Calendrier">
+              <ListItem href="/Participation/#calendrier" title="Calendrier">
                 <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
               </ListItem>
-              <ListItem href="#adhesion" title="Adhésion">
-                <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
+              <ListItem href="/Participation/#adhesion" title="Adhésion">
+                <p className="text-xs">Dons, Adhésions, Pétitions !</p>
               </ListItem>
-              <ListItem href="#dons" title="Dons">
-                <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
-              </ListItem>
-              <ListItem href="#petition" title="Pétition">
-                <p className="text-xs">Comprendre ce qui a forgé ce quartier</p>
-              </ListItem>
+              
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        {/*<NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
             <NavigationMenuLink
               className={`colornavitem ${navigationMenuTriggerStyle()}`}
@@ -99,7 +94,7 @@ export function NavigationMenuDemo() {
               Contacts
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
         {session && (
           <>
             <NavigationMenuItem className="">
