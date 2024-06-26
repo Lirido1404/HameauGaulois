@@ -29,9 +29,12 @@ export default async function Home() {
       >
         Présentation
       </h2>
-      <div className="flex flex-col gap-0 lg:flex-row mt-8 lg:mt-20 justify-center w-[70%] mx-auto">
-        <div className="flex justify-center items-center w-[50%]">
-          <p className="text-white text-justify px-16 py-2 ">
+
+
+
+      <div className="flex flex-col gap-0 lg:flex-row mt-8 lg:mt-20 justify-center lg:w-[70%] mx-auto">
+        <div className="flex justify-center items-center lg:w-[50%]">
+          <p className="text-white text-justify lg:px-16 py-2 p-4 ">
             Le quartier du Hameau est un quartier centenaire du Sud Parisien
             dont vous trouverez ici,
             <a
@@ -55,24 +58,27 @@ export default async function Home() {
         <Img2 />
       </div>
 
-      <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-0 justify-center w-[70%] mx-auto">
-        <Img3 />
-        <div className="flex justify-center items-center w-[50%]">
-          <p className="text-white text-justify px-16 py-2 ">
-            En particulier, le projet de PLUi prévoit de faire construire des
-            bâtiments collectifs de logements (bâtiments d&apos;appartements) de
-            5 niveaux, après avoir rasé le quartier. <br />
-            <br /> Hors, ce projet va à l&apos;encontre des objectifs affichés
-            de VSGP, qui avait annoncé défendre les zones pavillonnaires,
-            lesquelles participent au foisonnement écologique de
-            l&apos;agglomération. <br />
-            <br /> Alors que notre quartier apparaissait initialement en tant
-            que “Zone Pavillonnaire” dans le plan de zonage de notre ville, il
-            apparaît soudainement comme une “zone de projet” dans le plan de
-            zonage du projet de VSGP.
-          </p>
-        </div>
-      </div>
+
+      
+
+      <div className=" mt-8 lg:mt-0 grid grid-cols-1 lg:grid-cols-2 w-[90%] lg:w-[70%] mx-auto">
+  <Img3 />
+  <div className="flex justify-center items-center order-1 lg:order-1">
+    <p className="text-white text-justify lg:px-16">
+      En particulier, le projet de PLUi prévoit de faire construire des
+      bâtiments collectifs de logements (bâtiments d&apos;appartements) de
+      5 niveaux, après avoir rasé le quartier. <br />
+      <br /> Hors, ce projet va à l&apos;encontre des objectifs affichés
+      de VSGP, qui avait annoncé défendre les zones pavillonnaires,
+      lesquelles participent au foisonnement écologique de
+      l&apos;agglomération. <br />
+      <br /> Alors que notre quartier apparaissait initialement en tant
+      que “Zone Pavillonnaire” dans le plan de zonage de notre ville, il
+      apparaît soudainement comme une “zone de projet” dans le plan de
+      zonage du projet de VSGP.
+    </p>
+  </div>
+</div>
 
       <div>
         <Texte1 />

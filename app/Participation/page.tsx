@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { Suspense } from "react";
 import Titre3 from "../(components)/Titre3";
 import Cardforpagetwo from "../(components)/Cardforpagetwo";
 import CalandarComp from "../(components)/CalandarComp";
@@ -38,7 +38,9 @@ function page() {
           </div>
         </div>
 
+          <Suspense fallback={<> <p>Loading...</p> </>}>
           <CardCalendar />
+          </Suspense>
         
       </div>
       <h2
