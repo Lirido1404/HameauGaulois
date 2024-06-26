@@ -53,6 +53,7 @@ function Mainnav() {
           <Link
             href={"/"}
             className="w-[70%] mx-auto p-4 divbord flex justify-center"
+            onClick={handleToggleMenu}
           >
             <p className="text-center text-xl text-white font-bold">
               A propos de l&apos;association
@@ -61,6 +62,7 @@ function Mainnav() {
           <Link
             href={"/Participation"}
             className="w-[70%] mx-auto p-4 divbord flex justify-center"
+            onClick={handleToggleMenu}
           >
             <p className="text-center text-xl text-white font-bold">
               Participer et soutenir
@@ -72,6 +74,8 @@ function Mainnav() {
           <Link
             href={"/Account"}
             className="w-[70%] mx-auto p-4 divbord flex justify-center"
+            onClick={handleToggleMenu}
+
           >
             <p className="text-center text-xl text-white font-bold">Login</p>
           </Link>
