@@ -14,6 +14,9 @@ import {
 function ScrollAreaComm() {
   return (
     <ScrollArea className=" rounded-md mt-20">
+      <div className="ml-4 sliderr">
+          <img src="/Images/slidesvg.svg" className="h-12 w-12" alt="" />
+        </div>
       <div className="flex gap-4">
       <Card className="colorcard w-96 ml-4 rounded-lg">
           <CardHeader>

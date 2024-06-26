@@ -35,7 +35,7 @@ function Texte1() {
             exit={{ height: 0 }}
             transition={{ duration: 0.75 }}
           >
-            <p className="text-white text-justify mt-4 mx-auto w-[50%] border-2 border-white p-4 rounded">
+            <p className="text-white text-justify mt-4 mx-auto w-[90%] lg:w-[50%] border-2 border-white p-4 rounded">
               {" "}
               Les habitants du quartiers ont donc décidé de se mobiliser afin de
               contrer le projet de zonage les concernant. A défaut de succès,

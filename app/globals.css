@@ -574,3 +574,19 @@ body {
   animation: rotatee 4s ease-in-out infinite;
 
 }
+
+.sliderr {
+  animation: slideRight 2s ease-in-out infinite;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

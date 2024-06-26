@@ -22,7 +22,7 @@ function Img3() {
         stiffness: 500,
         damping: 22,
       }}
-      className="order-2 lg:order-1 lg:border-t-4 lg:border-r-4 border-white p-4 rounded-lg flex justify-center items-center"
+      className="order-2 lg:order-1 lg:border-t-4 lg:border-r-4 border-white lg:w-[100%] w-[70%] mt-4 lg:mt-0 mx-auto lg:p-4 rounded-lg flex justify-center items-center"
     >
       <Carousel className="w-full max-w-xs">
         <CarouselContent>

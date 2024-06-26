@@ -20,11 +20,12 @@ export default async function Home() {
     <div className="mt-20">
       <Titre2 />
 
-      <div className="w-[70%] mx-auto">
+      <div className="lg:w-[70%] mx-auto">
+        
         <ScrollAreaComm />
       </div>
       <h2
-        className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left"
+        className="w-[70%] mx-auto text-white font-bold text-2xl lg:mt-24 mt-10 lg:text-5xl text-center lg:text-left"
         id="pres"
       >
         Présentation
@@ -98,24 +99,24 @@ export default async function Home() {
         </Link>
       </div>
 
-      <div className="mt-20">
+      <div className="mt-6 lg:mt-20">
         <TimeLine2 />
       </div>
       <PhotoParticipants />
 
       <h2
-        className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left "
+        className="w-[70%] mx-auto text-white font-bold text-2xl mt-6 lg:mt-20 lg:text-5xl text-center lg:text-left "
         id="historique"
       >
         Historique
       </h2>
 
-      <div className="flex flex-col gap-0 lg:flex-row mt-8 lg:mt-20 justify-center w-[70%] mx-auto">
-        <div className="w-[50%] flex justify-end lg:border-b-4 lg:border-r-4 border-white p-1 rounded-lg ">
+      <div className=" gap-0 grid grid-cols-1 lg:grid-cols-2 mt-8 lg:mt-20 justify-center w-[80%] lg:w-[90%] mx-auto">
+        <div className=" flex justify-end lg:border-b-4 lg:border-r-4 border-white p-1 rounded-lg ">
           <Vid2 />
         </div>
-        <div className="flex justify-center items-center w-[50%]">
-          <p className="text-white text-justify px-16 py-10 ">
+        <div className="flex justify-center items-center ">
+          <p className="text-white text-justify lg:px-16 ">
             Avant de s&apos;appeler Plessis Robinson, notre ville
             s&apos;appelait Plessis Picquet. Au 19ème siècle, notre quartier
             n&apos;existait pas. Il n&apos;y avait que des champs et des prés.
@@ -136,9 +137,9 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-0 justify-center w-[70%] mx-auto">
-        <div className="flex justify-center items-center w-[50%]">
-          <p className="text-white text-justify px-16 py-2 ">
+      <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-0 justify-center  mx-auto">
+        <div className="flex justify-center items-center lg:w-[50%] ">
+          <p className="text-white text-justify p-8 lg:px-16 py-2  ">
             Une vieille dame est toujours propriétaire de la maison que son
             grand père a construit de ses mains. <br /> <br />
             2 belles-soeurs, toutes deux ayant passé les 90 ans, habitent

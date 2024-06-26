@@ -8,7 +8,7 @@ import Vid1 from "./Vid1";
 
 function Titre2() {
   return (
-    <div className="w-[70%] mx-auto flex-col lg:flex-row flex gap-8">
+    <div className="lg:w-[70%] mx-auto flex-col lg:flex-row flex px-8 gap-8">
       <div className="lg:w-[50%]">
         <h1 className="text-2xl  text-[#ffffff]">
           <span className="text-base lg:text-xl">Association</span> <br />
