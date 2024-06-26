@@ -18,16 +18,16 @@ function page() {
   return (
     <div className="mt-20">
       <Titre3 />
-      <div className="w-[70%] mx-auto flex-col lg:flex-row flex justify-center  gap-8 mt-20">
+      <div className="w-[85%] lg:w-[70%] mx-auto flex-col lg:flex-row flex justify-center  gap-8 mt-20">
         <Cardforpagetwo />
       </div>
       <h2
-        className="w-[70%] mx-auto text-white font-bold text-2xl mt-24 lg:text-5xl text-center lg:text-left "
+        className="w-[85%] lg:w-[70%] mx-auto text-white font-bold text-2xl lg:mt-24 mt-4 lg:text-5xl text-center lg:text-left "
         id="calendrier"
       >
         Calendrier
       </h2>
-      <div className="flex flex-col lg:flex-row justify-center  gap-4 w-[70%] mx-auto mt-20 ">
+      <div className="flex flex-col lg:flex-row justify-center  gap-4 w-[85%] lg:w-[70%] mx-auto lg:mt-20 mt-4 ">
         <div className="flex flex-col lg:flex-row gap-4">
           <CalandarComp />
           <div className="p-4 hidden lg:flex">

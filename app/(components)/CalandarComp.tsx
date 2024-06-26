@@ -50,6 +50,7 @@ function CalandarComp() {
 
   return (
     <div>
+      <div className="hidden lg:block">
       <Calendar
         mode="single"
         numberOfMonths={2}
@@ -59,6 +60,19 @@ function CalandarComp() {
         modifiers={modifiers}
         modifiersStyles={modifiersStyles}
       />
+      </div>
+
+      <div className="block lg:hidden">
+      <Calendar
+        mode="single"
+        numberOfMonths={1}
+        selected={date}
+        onSelect={setDate}
+        className="rounded-md border shadow bg-white text-black"
+        modifiers={modifiers}
+        modifiersStyles={modifiersStyles}
+      />
+      </div>
     </div>
   );
 }

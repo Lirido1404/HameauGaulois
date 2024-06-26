@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 function Img1() {
   return (
-    <div className="w-[50%] lg:border-t-4 lg:border-l-4 border-white p-4 rounded-lg">
+    <div className="order-1 lg:order-2 lg:border-t-4 lg:border-l-4 border-white p-4 rounded-lg">
       <motion.img
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

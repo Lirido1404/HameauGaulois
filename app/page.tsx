@@ -111,12 +111,12 @@ export default async function Home() {
         Historique
       </h2>
 
-      <div className=" gap-0 grid grid-cols-1 lg:grid-cols-2 mt-8 lg:mt-20 justify-center w-[80%] lg:w-[90%] mx-auto">
+      <div className=" gap-0 grid grid-cols-1 lg:grid-cols-2 mt-8 lg:mt-20 justify-center  lg:w-[90%] mx-auto">
         <div className=" flex justify-end lg:border-b-4 lg:border-r-4 border-white p-1 rounded-lg ">
           <Vid2 />
         </div>
         <div className="flex justify-center items-center ">
-          <p className="text-white text-justify lg:px-16 ">
+          <p className="text-white text-justify px-8  lg:px-16 ">
             Avant de s&apos;appeler Plessis Robinson, notre ville
             s&apos;appelait Plessis Picquet. Au 19ème siècle, notre quartier
             n&apos;existait pas. Il n&apos;y avait que des champs et des prés.
@@ -137,9 +137,9 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2 lg:flex-row mt-8 lg:mt-0 justify-center  mx-auto">
-        <div className="flex justify-center items-center lg:w-[50%] ">
-          <p className="text-white text-justify p-8 lg:px-16 py-2  ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 mt-10 lg:mt-0 lg:w-[90%] mx-auto">
+      <div className="flex justify-center items-center mx-auto order-2 lg:order-1">
+          <p className="text-white text-justify px-8 lg:px-16">
             Une vieille dame est toujours propriétaire de la maison que son
             grand père a construit de ses mains. <br /> <br />
             2 belles-soeurs, toutes deux ayant passé les 90 ans, habitent
@@ -154,8 +154,10 @@ export default async function Home() {
         </div>
         <Img1 />
       </div>
-      <Link href={"/Participation"} className="flex justify-center mt-10">
-        <button className="text-white text-xl bg-[#1A73E8] px-8 py-2 rounded border-1 border-[#EDEDED] mt-6 hover:bg-[#185ABC] ease-in-out duration-100 shadow">
+
+      
+      <Link href={"/Participation"} className="flex justify-center mt-10 w-[80%] mx-auto">
+        <button className="text-white text-xl bg-[#1A73E8] px-8 py-2 rounded border-1 border-[#EDEDED] mt-6 hover:bg-[#185ABC] ease-in-out duration-100 shadow ">
           Page de présentation des actions
         </button>
       </Link>

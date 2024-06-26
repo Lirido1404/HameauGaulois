@@ -13,7 +13,7 @@ import {
 
 function ScrollAreaComm() {
   return (
-    <ScrollArea className=" rounded-md mt-20">
+    <ScrollArea className=" rounded-md lg:mt-20">
       <div className="ml-4 sliderr">
           <img src="/Images/slidesvg.svg" className="h-12 w-12" alt="" />
         </div>
